@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#18365b">
+  <meta name="description" content="IHM Shri Shakti Unit 3 Team Skills reflection quizzes.">
+  <title>IHM Shri Shakti | Unit 3 Reflection Quizzes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header><div class="wrap"><div class="brand"><img class="college-logo" src="assets/ihm-shri-shakti-logo.png" alt="IHM Shri Shakti logo"><div><div class="kicker" style="color:#d7e8fb">IHM SHRI SHAKTI • EMPLOYABILITY SKILLS</div><h1>UNIT 3 | TEAM SKILLS</h1><p class="sub">Subtopic Reflection Quizzes • Learn · Attempt · Reflect</p></div></div></div></header>
+  <main class="wrap">
+    <section class="intro"><b>5-minute learning check</b><p>Choose the subtopic completed in class, answer all five questions and submit to see your score with explanations. Use the feedback to identify what you understood and what needs revision.</p><p><b>Student name is optional.</b> Your answers and score are displayed on this device only; they are not sent to the college or stored in a teacher dashboard.</p></section>
+    <div class="kicker">SELECT A SUBTOPIC</div>
+    <section class="topicgrid" id="topics" aria-label="Select a Unit 3 subtopic"></section>
+    <section class="quiz" id="quiz" aria-live="polite"><div class="quizhead"><div class="topiclogo" id="logo" aria-hidden="true"></div><div><div class="kicker" id="tag"></div><h2 id="title"></h2><div style="color:var(--muted);font-size:13px" id="desc"></div></div></div>
+      <div class="student"><input id="studentName" type="text" placeholder="Your name (optional)" maxlength="60" aria-label="Your name (optional)"><span class="kicker">5 QUESTIONS • 5 MARKS</span></div>
+      <div class="meta"><span id="progressText">0 of 5 questions answered</span><span>Choose one answer for each question</span></div><div class="bar" role="progressbar" aria-label="Quiz completion" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><span id="progress"></span></div>
+      <div id="questions"></div>
+      <div class="actions"><button class="btn primary" id="submit" type="button">Submit and show my score</button><button class="btn secondary" id="clear" type="button">Clear answers</button></div>
+      <p class="note">You can change your answers before submitting. All five questions must be answered to calculate your score.</p>
+    </section>
+    <section class="result" id="result" aria-live="polite"></section>
+  </main>
+</body>
+</html>

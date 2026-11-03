@@ -1,0 +1,42 @@
+
+:root{--navy:#18365b;--blue:#2b64a6;--paper:#f4f7fb;--ink:#1d2b3b;--muted:#69788b;--line:#dce4ee;--green:#16845d;--red:#b63e4c}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 Arial,Helvetica,sans-serif}
+header{background:linear-gradient(120deg,#122b4a,#2868a9);color:#fff;padding:24px 16px}
+.wrap{max-width:1000px;margin:auto;padding:0 16px}.brand{display:flex;align-items:center;gap:13px}.brandmark{width:54px;height:54px;border-radius:14px;background:#ffffff1c;border:1px solid #ffffff55;display:grid;place-items:center;font-size:26px;font-weight:bold}
+h1{font-size:clamp(23px,4vw,34px);line-height:1.15;margin:0}.sub{margin:6px 0 0;color:#e0ebf9}
+main{padding:22px 0 50px}.intro,.quiz,.result{background:#fff;border:1px solid var(--line);border-radius:17px;padding:19px;box-shadow:0 5px 22px #17375a0a}
+.intro{margin-bottom:17px}.intro p{margin:6px 0;color:var(--muted)}
+.topicgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:10px;margin:16px 0}
+.topic{background:white;border:1px solid var(--line);border-radius:13px;padding:12px;text-align:left;cursor:pointer;min-height:105px;color:var(--ink);transition:.15s}
+.topic:hover{transform:translateY(-2px);border-color:#8caed6}.topic.active{border:2px solid var(--blue);background:#eef5ff}
+.topic .ico{font-size:24px;display:block;margin-bottom:4px}.topic b{display:block;font-size:13px}.topic small{color:var(--muted)}
+.quiz{display:none}.quiz.show{display:block}.quizhead{display:flex;align-items:center;gap:12px;margin-bottom:12px}.topiclogo{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:27px;background:#edf3fa;flex:none}
+.kicker{font-size:11px;letter-spacing:1px;font-weight:bold;color:var(--muted)}h2{font-size:22px;color:var(--navy);margin:1px 0}
+.meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin:12px 0 7px}
+.bar{height:8px;background:#e9eef5;border-radius:8px;overflow:hidden}.bar span{display:block;height:100%;background:#e7ad3c;width:0;transition:width .2s}
+.student{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:15px 0}.student input{flex:1;min-width:180px;padding:11px 12px;border:1px solid var(--line);border-radius:9px;font:inherit}
+.qcard{padding:16px 0;border-bottom:1px solid #edf0f5}.qcard:last-of-type{border-bottom:0}.qtitle{font-weight:700;margin-bottom:10px}
+.options{display:grid;gap:8px}.opt{border:1px solid var(--line);border-radius:10px;background:#fff;padding:10px 12px;text-align:left;font:inherit;color:var(--ink);cursor:pointer}
+.opt:hover{border-color:#7199c8;background:#f7faff}.opt.chosen{border:2px solid var(--blue);background:#eef5ff}.opt.correct{border-color:var(--green);background:#eaf7f1}.opt.incorrect{border-color:var(--red);background:#fff0f1}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{border:0;border-radius:9px;padding:11px 17px;font-weight:bold;cursor:pointer}.primary{background:var(--blue);color:white}.secondary{background:#e9eff7;color:var(--navy)}.btn:disabled{opacity:.5;cursor:not-allowed}
+.result{display:none;margin-top:16px}.result.show{display:block}.scoreline{display:flex;align-items:center;gap:15px;flex-wrap:wrap}.scorecircle{width:88px;height:88px;border-radius:50%;background:#edf5ff;border:6px solid #d5e6fa;display:grid;place-items:center;font-size:22px;font-weight:bold;color:var(--navy)}
+.result h3{margin:0;color:var(--navy);font-size:22px}.feedback{background:#f3f6fa;border-radius:10px;padding:12px;margin-top:12px}.review{margin-top:15px}.reviewitem{padding:11px 0;border-bottom:1px solid #edf0f5}.reviewitem b{display:block}.right{color:var(--green)}.wrong{color:var(--red)}
+.reflection{background:#fff9e9;border:1px solid #f3e3b8;padding:13px;border-radius:11px;margin-top:14px}.reflection textarea{width:100%;min-height:75px;border:1px solid #e7d7a8;border-radius:8px;padding:10px;font:inherit;margin-top:7px}
+.note{font-size:12px;color:var(--muted);margin-top:14px}.hidden{display:none!important}
+@media(max-width:600px){.wrap{padding:0 12px}.intro,.quiz,.result{padding:14px}.topicgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.topic{min-height:100px}.qcard{padding:13px 0}}
+@media print{header,.topicgrid,.intro,.actions{display:none!important}body{background:white}.quiz,.result{display:block!important;box-shadow:none;border:0}}
+
+/* Mobile and accessibility refinements */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+button,input,textarea{touch-action:manipulation}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #f0b64c;outline-offset:2px}
+.topic,.opt,.btn{min-height:44px}
+.opt{line-height:1.4;overflow-wrap:anywhere}
+.student input{min-height:46px}
+.reflection textarea{min-height:110px}
+@media(max-width:480px){header{padding:18px 0}.brand{align-items:flex-start}.brandmark{width:46px;height:46px;font-size:21px;flex:none}h1{font-size:22px}.sub{font-size:13px}.topicgrid{grid-template-columns:1fr;gap:8px}.topic{min-height:76px;display:grid;grid-template-columns:36px 1fr;column-gap:8px;align-items:center}.topic .ico{grid-row:span 2;margin:0}.topic b{font-size:14px}.topic small{font-size:11px}.quizhead{align-items:flex-start}.topiclogo{width:46px;height:46px}.student{align-items:stretch}.student input{min-width:100%;width:100%}.student .kicker{width:100%}.meta{font-size:12px}.actions{display:grid;grid-template-columns:1fr}.btn{width:100%;padding:13px}.scorecircle{width:76px;height:76px;font-size:20px}.result h3{font-size:19px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Official IHM Shri Shakti logo */
+.college-logo{width:64px;height:64px;object-fit:contain;background:#fff;border-radius:12px;padding:5px;flex:none}
+@media(max-width:600px){.college-logo{width:54px;height:54px}}
